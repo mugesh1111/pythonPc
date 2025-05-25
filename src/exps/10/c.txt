@@ -1,0 +1,7 @@
+while True:
+    studentmark = int(input("Enter the student Mark: "))
+    if studentmark < 0 or studentmark > 100:
+        print("The student Mark value is out of range, try again.")
+    else:
+        print("The student Mark entered is Valid.")
+        break
