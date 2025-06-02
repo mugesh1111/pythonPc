@@ -1,0 +1,21 @@
+import pygame
+import sys
+
+pygame.init()
+pygame.display.set_caption('Keyboard Events')
+pygame.display.set_mode((400, 400))
+
+running = True
+while running:
+    event = pygame.event.wait()
+    if event.type == pygame.QUIT:
+        running = False
+    elif event.type == pygame.KEYDOWN:
+        key_name = pygame.key.name(event.key).upper()
+        print(f'"{key_name}" key pressed')
+    elif event.type == pygame.KEYUP:
+        key_name = pygame.key.name(event.key).upper()
+        print(f'"{key_name}" key released')
+
+pygame.quit()
+sys.exit()

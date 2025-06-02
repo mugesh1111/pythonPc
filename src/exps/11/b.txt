@@ -1,0 +1,23 @@
+import pygame
+import sys
+
+pygame.init()
+white = (255, 255, 255)
+height = 400
+width = 400
+display_surface = pygame.display.set_mode((height, width))
+pygame.display.set_caption('Image')
+
+image = pygame.image.load(r'C:\Users\YourUsername\Desktop\download.png')
+
+running = True
+while running:
+    display_surface.fill(white)
+    display_surface.blit(image, (0, 0))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    pygame.display.update()
+
+pygame.quit()
+sys.exit()

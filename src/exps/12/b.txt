@@ -1,0 +1,46 @@
+import pygame
+import sys
+
+pygame.init()
+
+# Screen dimensions
+screen_width = 800
+screen_height = 600
+
+# Colors
+white = (255, 255, 255)
+gray = (169, 169, 169)
+
+# Set up display
+screen = pygame.display.set_mode((screen_width, screen_height))
+pygame.display.set_caption("Car Race")
+
+# Load car image
+car = pygame.image.load("car.png")  # Make sure this image is in your working directory
+car = pygame.transform.scale(car, (70, 140))
+car_x = screen_width // 2 - 35
+car_y = screen_height - 150
+car_speed = 5
+
+clock = pygame.time.Clock()
+
+# Game loop
+while True:
+    screen.fill(gray)
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    # Key press handling
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT] and car_x > 0:
+        car_x -= car_speed
+    if keys[pygame.K_RIGHT] and car_x < screen_width - 70:
+        car_x += car_speed
+
+    # Draw car
+    screen.blit(car, (car_x, car_y))
+    pygame.display.update()
+    clock.tick(60)

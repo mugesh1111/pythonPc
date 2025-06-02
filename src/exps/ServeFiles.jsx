@@ -1,3 +1,7 @@
+import twoA from "../exps/2/a.txt";
+import twoB from "../exps/2/b.txt";
+import twoC from "../exps/2/c.txt";
+
 import threeA from "../exps/3/a.txt";
 import threeB from "../exps/3/b.txt";
 import threeC from "../exps/3/c.txt";
@@ -39,7 +43,21 @@ import tenA from "../exps/10/a.txt";
 import tenB from "../exps/10/b.txt";
 import tenC from "../exps/10/c.txt";
 
+import elevenA from "../exps/11/a.txt";
+import elevenB from "../exps/11/b.txt";
+import elevenC from "../exps/11/c.txt";
+
+import twelveA from "../exps/12/a.txt";
+import twelveB from "../exps/12/b.txt";
+
+import thirteenA from "../exps/13/a.txt";
+
 const textFiles = {
+  2: {
+    a: twoA,
+    b: twoB,
+    c: twoC,
+  },
   3: {
     a: threeA,
     b: threeB,
@@ -88,7 +106,19 @@ const textFiles = {
     a: tenA,
     b: tenB,
     c: tenC,
-  }
+  },
+  11: {
+    a: elevenA,
+    b: elevenB,
+    c: elevenC,
+  },
+  12: {
+    a: twelveA,
+    b: twelveB,
+  },
+  13: {
+    a: thirteenA,
+  },
 };
 
 export default textFiles;
